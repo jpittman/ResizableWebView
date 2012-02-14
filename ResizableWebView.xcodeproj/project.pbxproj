@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8159589B14EB17F3007CF6AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8159589A14EB17F3007CF6AE /* UIKit.framework */; };
+		8159589D14EB17F3007CF6AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8159589C14EB17F3007CF6AE /* Foundation.framework */; };
+		8159589F14EB17F3007CF6AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8159589E14EB17F3007CF6AE /* CoreGraphics.framework */; };
+		815958A514EB17F3007CF6AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 815958A314EB17F3007CF6AE /* InfoPlist.strings */; };
+		815958A714EB17F3007CF6AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815958A614EB17F3007CF6AE /* main.m */; };
+		815958AB14EB17F3007CF6AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815958AA14EB17F3007CF6AE /* AppDelegate.m */; };
+		815958B314EB17F3007CF6AE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 815958B214EB17F3007CF6AE /* SenTestingKit.framework */; };
+		815958B414EB17F3007CF6AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8159589A14EB17F3007CF6AE /* UIKit.framework */; };
+		815958B514EB17F3007CF6AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8159589C14EB17F3007CF6AE /* Foundation.framework */; };
+		815958BD14EB17F3007CF6AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 815958BB14EB17F3007CF6AE /* InfoPlist.strings */; };
+		815958C014EB17F3007CF6AE /* ResizableWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 815958BF14EB17F3007CF6AE /* ResizableWebViewTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		815958B614EB17F3007CF6AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8159588D14EB17F2007CF6AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8159589514EB17F2007CF6AE;
+			remoteInfo = ResizableWebView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8159589614EB17F3007CF6AE /* ResizableWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResizableWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8159589A14EB17F3007CF6AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8159589C14EB17F3007CF6AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8159589E14EB17F3007CF6AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		815958A214EB17F3007CF6AE /* ResizableWebView-Info.plist */ = {isa = PBXFileReference; path = "ResizableWebView-Info.plist"; sourceTree = "<group>"; };
+		815958A414EB17F3007CF6AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		815958A614EB17F3007CF6AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		815958A814EB17F3007CF6AE /* ResizableWebView-Prefix.pch */ = {isa = PBXFileReference; path = "ResizableWebView-Prefix.pch"; sourceTree = "<group>"; };
+		815958A914EB17F3007CF6AE /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		815958AA14EB17F3007CF6AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		815958B114EB17F3007CF6AE /* ResizableWebViewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResizableWebViewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		815958B214EB17F3007CF6AE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		815958BA14EB17F3007CF6AE /* ResizableWebViewTests-Info.plist */ = {isa = PBXFileReference; path = "ResizableWebViewTests-Info.plist"; sourceTree = "<group>"; };
+		815958BC14EB17F3007CF6AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		815958BE14EB17F3007CF6AE /* ResizableWebViewTests.h */ = {isa = PBXFileReference; path = ResizableWebViewTests.h; sourceTree = "<group>"; };
+		815958BF14EB17F3007CF6AE /* ResizableWebViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResizableWebViewTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8159589314EB17F2007CF6AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8159589B14EB17F3007CF6AE /* UIKit.framework in Frameworks */,
+				8159589D14EB17F3007CF6AE /* Foundation.framework in Frameworks */,
+				8159589F14EB17F3007CF6AE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		815958AD14EB17F3007CF6AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				815958B314EB17F3007CF6AE /* SenTestingKit.framework in Frameworks */,
+				815958B414EB17F3007CF6AE /* UIKit.framework in Frameworks */,
+				815958B514EB17F3007CF6AE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8159588B14EB17F2007CF6AE = {
+			isa = PBXGroup;
+			children = (
+				815958A014EB17F3007CF6AE /* ResizableWebView */,
+				815958B814EB17F3007CF6AE /* ResizableWebViewTests */,
+				8159589914EB17F3007CF6AE /* Frameworks */,
+				8159589714EB17F3007CF6AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8159589714EB17F3007CF6AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8159589614EB17F3007CF6AE /* ResizableWebView.app */,
+				815958B114EB17F3007CF6AE /* ResizableWebViewTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8159589914EB17F3007CF6AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8159589A14EB17F3007CF6AE /* UIKit.framework */,
+				8159589C14EB17F3007CF6AE /* Foundation.framework */,
+				8159589E14EB17F3007CF6AE /* CoreGraphics.framework */,
+				815958B214EB17F3007CF6AE /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		815958A014EB17F3007CF6AE /* ResizableWebView */ = {
+			isa = PBXGroup;
+			children = (
+				815958A914EB17F3007CF6AE /* AppDelegate.h */,
+				815958AA14EB17F3007CF6AE /* AppDelegate.m */,
+				815958A114EB17F3007CF6AE /* Supporting Files */,
+			);
+			path = ResizableWebView;
+			sourceTree = "<group>";
+		};
+		815958A114EB17F3007CF6AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				815958A214EB17F3007CF6AE /* ResizableWebView-Info.plist */,
+				815958A314EB17F3007CF6AE /* InfoPlist.strings */,
+				815958A614EB17F3007CF6AE /* main.m */,
+				815958A814EB17F3007CF6AE /* ResizableWebView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		815958B814EB17F3007CF6AE /* ResizableWebViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				815958BE14EB17F3007CF6AE /* ResizableWebViewTests.h */,
+				815958BF14EB17F3007CF6AE /* ResizableWebViewTests.m */,
+				815958B914EB17F3007CF6AE /* Supporting Files */,
+			);
+			path = ResizableWebViewTests;
+			sourceTree = "<group>";
+		};
+		815958B914EB17F3007CF6AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				815958BA14EB17F3007CF6AE /* ResizableWebViewTests-Info.plist */,
+				815958BB14EB17F3007CF6AE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8159589514EB17F2007CF6AE /* ResizableWebView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 815958C314EB17F3007CF6AE /* Build configuration list for PBXNativeTarget "ResizableWebView" */;
+			buildPhases = (
+				8159589214EB17F2007CF6AE /* Sources */,
+				8159589314EB17F2007CF6AE /* Frameworks */,
+				8159589414EB17F2007CF6AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ResizableWebView;
+			productName = ResizableWebView;
+			productReference = 8159589614EB17F3007CF6AE /* ResizableWebView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		815958B014EB17F3007CF6AE /* ResizableWebViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 815958C614EB17F3007CF6AE /* Build configuration list for PBXNativeTarget "ResizableWebViewTests" */;
+			buildPhases = (
+				815958AC14EB17F3007CF6AE /* Sources */,
+				815958AD14EB17F3007CF6AE /* Frameworks */,
+				815958AE14EB17F3007CF6AE /* Resources */,
+				815958AF14EB17F3007CF6AE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				815958B714EB17F3007CF6AE /* PBXTargetDependency */,
+			);
+			name = ResizableWebViewTests;
+			productName = ResizableWebViewTests;
+			productReference = 815958B114EB17F3007CF6AE /* ResizableWebViewTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8159588D14EB17F2007CF6AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Group 6";
+			};
+			buildConfigurationList = 8159589014EB17F2007CF6AE /* Build configuration list for PBXProject "ResizableWebView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8159588B14EB17F2007CF6AE;
+			productRefGroup = 8159589714EB17F3007CF6AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8159589514EB17F2007CF6AE /* ResizableWebView */,
+				815958B014EB17F3007CF6AE /* ResizableWebViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8159589414EB17F2007CF6AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				815958A514EB17F3007CF6AE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		815958AE14EB17F3007CF6AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				815958BD14EB17F3007CF6AE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		815958AF14EB17F3007CF6AE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8159589214EB17F2007CF6AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				815958A714EB17F3007CF6AE /* main.m in Sources */,
+				815958AB14EB17F3007CF6AE /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		815958AC14EB17F3007CF6AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				815958C014EB17F3007CF6AE /* ResizableWebViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		815958B714EB17F3007CF6AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8159589514EB17F2007CF6AE /* ResizableWebView */;
+			targetProxy = 815958B614EB17F3007CF6AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		815958A314EB17F3007CF6AE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				815958A414EB17F3007CF6AE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		815958BB14EB17F3007CF6AE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				815958BC14EB17F3007CF6AE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		815958C114EB17F3007CF6AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		815958C214EB17F3007CF6AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		815958C414EB17F3007CF6AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ResizableWebView/ResizableWebView-Prefix.pch";
+				INFOPLIST_FILE = "ResizableWebView/ResizableWebView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		815958C514EB17F3007CF6AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ResizableWebView/ResizableWebView-Prefix.pch";
+				INFOPLIST_FILE = "ResizableWebView/ResizableWebView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		815958C714EB17F3007CF6AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ResizableWebView.app/ResizableWebView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ResizableWebView/ResizableWebView-Prefix.pch";
+				INFOPLIST_FILE = "ResizableWebViewTests/ResizableWebViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		815958C814EB17F3007CF6AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ResizableWebView.app/ResizableWebView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ResizableWebView/ResizableWebView-Prefix.pch";
+				INFOPLIST_FILE = "ResizableWebViewTests/ResizableWebViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8159589014EB17F2007CF6AE /* Build configuration list for PBXProject "ResizableWebView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				815958C114EB17F3007CF6AE /* Debug */,
+				815958C214EB17F3007CF6AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		815958C314EB17F3007CF6AE /* Build configuration list for PBXNativeTarget "ResizableWebView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				815958C414EB17F3007CF6AE /* Debug */,
+				815958C514EB17F3007CF6AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		815958C614EB17F3007CF6AE /* Build configuration list for PBXNativeTarget "ResizableWebViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				815958C714EB17F3007CF6AE /* Debug */,
+				815958C814EB17F3007CF6AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8159588D14EB17F2007CF6AE /* Project object */;
+}
