@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WebViewController.h"
 
 @implementation AppDelegate
 
@@ -17,6 +18,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    WebViewController *webController = [[WebViewController alloc] initWithNibName:@"WebViewController" bundle:nil];
+    [self.window setRootViewController:webController];
     [self.window makeKeyAndVisible];
     return YES;
 }
