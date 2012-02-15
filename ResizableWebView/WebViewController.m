@@ -8,6 +8,12 @@
 
 #import "WebViewController.h"
 
+@interface WebViewController ()
+
+- (void)setHeight:(CGFloat)height forView:(UIView *)aView;
+
+@end
+
 @implementation WebViewController
 
 @synthesize sizeButton, textLabel, aWebView;
@@ -86,6 +92,8 @@
 }
 
 - (void) removeContent {
+    
+    [self setHeight:150.0 forView:self.aWebView];
 
     // Load up an empty string into the webview.
     [self.aWebView loadHTMLString:@"" baseURL:nil];
@@ -124,7 +132,7 @@
 //    NSLog(@"DidFinishLoad got called.");
     
     // our bit of javascript to determine the height of the html content.
-    NSString *jsString = @"function getDocHeight() {"
+    NSString *jsHeight = @"function getDocHeight() {"
                          "var D = document;"
                          "return Math.max("
                          "Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),"
@@ -136,14 +144,12 @@
 
     
     // Execute our javascript against the html and return the height.
-    NSString *content = [webView stringByEvaluatingJavaScriptFromString:jsString];
+    NSString *content = [webView stringByEvaluatingJavaScriptFromString:jsHeight];
     CGFloat height = [content floatValue];
     NSLog(@"height of the text is: %f", height);
     
     // Adjust the height of the webivew based upon the content.
-    CGRect frame = [webView frame];
-    frame.size.height = height;
-    [webView setFrame:frame];
+    [self setHeight:height forView:webView];
     
     // set our label indicating the new height of the view.
     [self.textLabel setText:[NSString localizedStringWithFormat:@"%.1f", height]];
@@ -153,6 +159,15 @@
 //    {
 //        [[self delegate] webViewController:self webViewDidResize:frame.size];
 //    }
+}
+
+#pragma mark - 
+
+// testing a little convienance method handling height changes in a view.
+- (void)setHeight:(CGFloat)height forView:(UIView *)aView {
+    CGRect frame = [aView frame];
+    frame.size.height = height;
+    [aView setFrame:frame];
 }
 
 @end
