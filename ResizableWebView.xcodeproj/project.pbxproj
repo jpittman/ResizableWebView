@@ -18,6 +18,8 @@
 		815958B514EB17F3007CF6AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8159589C14EB17F3007CF6AE /* Foundation.framework */; };
 		815958BD14EB17F3007CF6AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 815958BB14EB17F3007CF6AE /* InfoPlist.strings */; };
 		815958C014EB17F3007CF6AE /* ResizableWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 815958BF14EB17F3007CF6AE /* ResizableWebViewTests.m */; };
+		815958CC14EB18DE007CF6AE /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815958CA14EB18DE007CF6AE /* WebViewController.m */; };
+		815958CD14EB18DE007CF6AE /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815958CB14EB18DE007CF6AE /* WebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,18 +37,21 @@
 		8159589A14EB17F3007CF6AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8159589C14EB17F3007CF6AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8159589E14EB17F3007CF6AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		815958A214EB17F3007CF6AE /* ResizableWebView-Info.plist */ = {isa = PBXFileReference; path = "ResizableWebView-Info.plist"; sourceTree = "<group>"; };
+		815958A214EB17F3007CF6AE /* ResizableWebView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ResizableWebView-Info.plist"; sourceTree = "<group>"; };
 		815958A414EB17F3007CF6AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		815958A614EB17F3007CF6AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		815958A814EB17F3007CF6AE /* ResizableWebView-Prefix.pch */ = {isa = PBXFileReference; path = "ResizableWebView-Prefix.pch"; sourceTree = "<group>"; };
-		815958A914EB17F3007CF6AE /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		815958A814EB17F3007CF6AE /* ResizableWebView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ResizableWebView-Prefix.pch"; sourceTree = "<group>"; };
+		815958A914EB17F3007CF6AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		815958AA14EB17F3007CF6AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		815958B114EB17F3007CF6AE /* ResizableWebViewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResizableWebViewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		815958B214EB17F3007CF6AE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		815958BA14EB17F3007CF6AE /* ResizableWebViewTests-Info.plist */ = {isa = PBXFileReference; path = "ResizableWebViewTests-Info.plist"; sourceTree = "<group>"; };
+		815958BA14EB17F3007CF6AE /* ResizableWebViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ResizableWebViewTests-Info.plist"; sourceTree = "<group>"; };
 		815958BC14EB17F3007CF6AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		815958BE14EB17F3007CF6AE /* ResizableWebViewTests.h */ = {isa = PBXFileReference; path = ResizableWebViewTests.h; sourceTree = "<group>"; };
+		815958BE14EB17F3007CF6AE /* ResizableWebViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResizableWebViewTests.h; sourceTree = "<group>"; };
 		815958BF14EB17F3007CF6AE /* ResizableWebViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResizableWebViewTests.m; sourceTree = "<group>"; };
+		815958C914EB18DE007CF6AE /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		815958CA14EB18DE007CF6AE /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		815958CB14EB18DE007CF6AE /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +114,9 @@
 				815958A914EB17F3007CF6AE /* AppDelegate.h */,
 				815958AA14EB17F3007CF6AE /* AppDelegate.m */,
 				815958A114EB17F3007CF6AE /* Supporting Files */,
+				815958C914EB18DE007CF6AE /* WebViewController.h */,
+				815958CA14EB18DE007CF6AE /* WebViewController.m */,
+				815958CB14EB18DE007CF6AE /* WebViewController.xib */,
 			);
 			path = ResizableWebView;
 			sourceTree = "<group>";
@@ -215,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				815958A514EB17F3007CF6AE /* InfoPlist.strings in Resources */,
+				815958CD14EB18DE007CF6AE /* WebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +260,7 @@
 			files = (
 				815958A714EB17F3007CF6AE /* main.m in Sources */,
 				815958AB14EB17F3007CF6AE /* AppDelegate.m in Sources */,
+				815958CC14EB18DE007CF6AE /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
