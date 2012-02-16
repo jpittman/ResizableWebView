@@ -20,6 +20,7 @@
 		815958C014EB17F3007CF6AE /* ResizableWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 815958BF14EB17F3007CF6AE /* ResizableWebViewTests.m */; };
 		815958CC14EB18DE007CF6AE /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815958CA14EB18DE007CF6AE /* WebViewController.m */; };
 		815958CD14EB18DE007CF6AE /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815958CB14EB18DE007CF6AE /* WebViewController.xib */; };
+		81778D3414EC907F00C6AF80 /* lorem.html in Resources */ = {isa = PBXBuildFile; fileRef = 81778D3314EC907F00C6AF80 /* lorem.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		815958C914EB18DE007CF6AE /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		815958CA14EB18DE007CF6AE /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		815958CB14EB18DE007CF6AE /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		81778D3314EC907F00C6AF80 /* lorem.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lorem.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				815958B814EB17F3007CF6AE /* ResizableWebViewTests */,
 				8159589914EB17F3007CF6AE /* Frameworks */,
 				8159589714EB17F3007CF6AE /* Products */,
+				81778D3314EC907F00C6AF80 /* lorem.html */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,6 +227,7 @@
 			files = (
 				815958A514EB17F3007CF6AE /* InfoPlist.strings in Resources */,
 				815958CD14EB18DE007CF6AE /* WebViewController.xib in Resources */,
+				81778D3414EC907F00C6AF80 /* lorem.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +428,7 @@
 				815958C514EB17F3007CF6AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		815958C614EB17F3007CF6AE /* Build configuration list for PBXNativeTarget "ResizableWebViewTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +437,7 @@
 				815958C814EB17F3007CF6AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
