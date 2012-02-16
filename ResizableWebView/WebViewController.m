@@ -11,6 +11,7 @@
 @interface WebViewController ()
 
 - (void)setHeight:(CGFloat)height forView:(UIView *)aView;
+- (void)setScrollViewHeight:(CGFloat)height;
 
 @end
 
@@ -40,6 +41,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // setting the size of the screen for scrolling.
+    [self setScrollViewHeight:460];
+    
     // Do any additional setup after loading the view from its nib.
     [self.view setAutoresizingMask:(UIViewAutoresizingFlexibleHeight)];
     
@@ -153,10 +158,24 @@
 #pragma mark - 
 
 // testing a little convienance method handling height changes in a view.
-- (void)setHeight:(CGFloat)height forView:(UIView *)aView {
+- (void)setHeight:(CGFloat)height forView:(UIView *)aView 
+{
     CGRect frame = [aView frame];
     frame.size.height = height;
     [aView setFrame:frame];
+
+    if (height > 150) {
+        CGFloat scrollHeight = height + 110 + 20;
+        [self setScrollViewHeight:scrollHeight];
+    } else {
+        [self setScrollViewHeight:460];
+    }
+}
+
+- (void)setScrollViewHeight:(CGFloat)height 
+{
+    UIScrollView *tempScrollView=(UIScrollView *)self.view;
+    tempScrollView.contentSize=CGSizeMake(320,height);
 }
 
 @end
