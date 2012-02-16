@@ -16,7 +16,7 @@
 
 @implementation WebViewController
 
-@synthesize sizeButton, textLabel, aWebView;
+@synthesize addButton, removeButton, textLabel, aWebView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,10 +48,6 @@
     
     // disable scrolling inside of the webview.
     [self.aWebView.scrollView setScrollEnabled:NO];
-
-    // Adding the action to our button.
-    [self.sizeButton addTarget:self action:@selector(addContent) 
-              forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewDidUnload
@@ -70,7 +66,7 @@
 
 # pragma mark - Button methods
 
-- (void) addContent 
+- (IBAction)addContent 
 {
     
     // Building the html string we want to load.
@@ -82,28 +78,15 @@
     // load our html string into the webview.
     [self.aWebView loadHTMLString:html baseURL:nil];
     
-    // Change out the action that the button can take and replace it's text.
-    [self.sizeButton removeTarget:self action:@selector(addContent) 
-                 forControlEvents:UIControlEventTouchUpInside];
-    [self.sizeButton addTarget:self action:@selector(removeContent) 
-              forControlEvents:UIControlEventTouchUpInside];
-    [self.sizeButton setTitle:@"Remove Content From WebView" forState:UIControlStateNormal];
-    
 }
 
-- (void) removeContent {
+- (IBAction)removeContent 
+{
     
     [self setHeight:150.0 forView:self.aWebView];
 
     // Load up an empty string into the webview.
     [self.aWebView loadHTMLString:@"" baseURL:nil];
-    
-    // Change out the action that the button can take and replace it's text.
-    [self.sizeButton removeTarget:self action:@selector(removeContent) 
-                 forControlEvents:UIControlEventTouchUpInside];
-    [self.sizeButton addTarget:self action:@selector(addContent) 
-              forControlEvents:UIControlEventTouchUpInside];
-    [self.sizeButton setTitle:@"Add Content To WebView" forState:UIControlStateNormal];
 
 }
 
