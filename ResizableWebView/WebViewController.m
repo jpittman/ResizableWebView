@@ -69,11 +69,18 @@
 - (IBAction)addContent 
 {
     
-    // Building the html string we want to load.
-    NSString *boiler = @"<html><head><meta name=\"viewport\" content=\"width=320\"/>"
+    // Boilerplate html.  Note the meta tag included.
+    NSString *boiler = @"<html><head><meta name=\"viewport\" content=\"width=280\"/>"
                         "</head><body>%@</body></html>";
-    NSString *content = @"<h1>This is a title.</h1>";
-    NSString *html = [[NSString alloc] initWithFormat:boiler, content];
+
+    // Grab the contents of a html file and return it as a string.
+    NSError *error;
+    NSString *loremPath = [[NSBundle mainBundle] pathForResource:@"lorem" ofType:@"html"];
+    NSStream *contents = [NSString stringWithContentsOfFile:loremPath 
+                                                   encoding:NSASCIIStringEncoding error:&error];
+    
+    // Combine the boilerplate and the file contents.
+    NSString *html = [[NSString alloc] initWithFormat:boiler, contents];
     
     // load our html string into the webview.
     [self.aWebView loadHTMLString:html baseURL:nil];
@@ -82,7 +89,8 @@
 
 - (IBAction)removeContent 
 {
-    
+ 
+    // Reset the height that was originally used for the webview.
     [self setHeight:150.0 forView:self.aWebView];
 
     // Load up an empty string into the webview.
@@ -127,9 +135,7 @@
 
     
     // Execute our javascript against the html and return the height.
-    NSString *content = [webView stringByEvaluatingJavaScriptFromString:jsHeight];
-    CGFloat height = [content floatValue];
-    NSLog(@"height of the text is: %f", height);
+    CGFloat height = [[webView stringByEvaluatingJavaScriptFromString:jsHeight] floatValue];
     
     // Adjust the height of the webivew based upon the content.
     [self setHeight:height forView:webView];
