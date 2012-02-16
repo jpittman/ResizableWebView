@@ -10,14 +10,19 @@
 
 @interface WebViewController : UIViewController <UIWebViewDelegate> {
     
-    IBOutlet UIButton *sizeButton;
-    IBOutlet UILabel *textLabel;
-    IBOutlet UIWebView *aWebView;
+    UIButton *addButton;
+    UIButton *removeButton;
+    UILabel *textLabel;
+    UIWebView *aWebView;
 }
 
-@property (nonatomic, retain) IBOutlet UIButton *sizeButton;
+@property (nonatomic, retain) IBOutlet UIButton *addButton;
+@property (nonatomic, retain) IBOutlet UIButton *removeButton;
 @property (nonatomic, retain) IBOutlet UILabel *textLabel;
 @property (nonatomic, retain) IBOutlet UIWebView *aWebView;
+
+- (IBAction)addContent;
+- (IBAction)removeContent;
 
 
 @end
