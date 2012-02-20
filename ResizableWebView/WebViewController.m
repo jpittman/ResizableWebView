@@ -10,14 +10,14 @@
 
 @interface WebViewController ()
 
-- (void)setHeight:(CGFloat)height forView:(UIView *)aView;
-- (void)setScrollViewHeight:(CGFloat)height;
+- (void)adjustHeight:(CGFloat)height forView:(UIView *)aView;
+- (void)adjustScrollViewHeight:(CGFloat)height;
 
 @end
 
 @implementation WebViewController
 
-@synthesize addButton, removeButton, textLabel, aWebView;
+@synthesize addButton, removeButton, heightLabel, widthLabel, aWebView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,13 +43,10 @@
     [super viewDidLoad];
     
     // setting the size of the screen for scrolling.
-    [self setScrollViewHeight:460];
+    [self adjustScrollViewHeight:460];
     
     // Do any additional setup after loading the view from its nib.
     [self.view setAutoresizingMask:(UIViewAutoresizingFlexibleHeight)];
-    
-    // set the webview delegate to our view controller.
-    [self.aWebView setDelegate:self];
     
     // disable scrolling inside of the webview.
     [self.aWebView.scrollView setScrollEnabled:NO];
@@ -66,7 +63,7 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
 }
 
 # pragma mark - Button methods
@@ -96,7 +93,7 @@
 {
  
     // Reset the height that was originally used for the webview.
-    [self setHeight:150.0 forView:self.aWebView];
+    [self adjustHeight:150.0 forView:self.aWebView];
 
     // Load up an empty string into the webview.
     [self.aWebView loadHTMLString:@"" baseURL:nil];
@@ -143,10 +140,10 @@
     CGFloat height = [[webView stringByEvaluatingJavaScriptFromString:jsHeight] floatValue];
     
     // Adjust the height of the webivew based upon the content.
-    [self setHeight:height forView:webView];
+    [self adjustHeight:height forView:webView];
     
     // set our label indicating the new height of the view.
-    [self.textLabel setText:[NSString localizedStringWithFormat:@"%.1f", height]];
+    [self.heightLabel setText:[NSString localizedStringWithFormat:@"%.1f", height]];
     
     
 //    if ([[self delegate] respondsToSelector:@selector(webViewController:webViewDidResize:);])
@@ -155,10 +152,10 @@
 //    }
 }
 
-#pragma mark - 
+#pragma mark - Height Methods
 
 // testing a little convienance method handling height changes in a view.
-- (void)setHeight:(CGFloat)height forView:(UIView *)aView 
+- (void)adjustHeight:(CGFloat)height forView:(UIView *)aView 
 {
     CGRect frame = [aView frame];
     frame.size.height = height;
@@ -166,16 +163,30 @@
 
     if (height > 150) {
         CGFloat scrollHeight = height + 110 + 20;
-        [self setScrollViewHeight:scrollHeight];
+        [self adjustScrollViewHeight:scrollHeight];
     } else {
-        [self setScrollViewHeight:460];
+        [self adjustScrollViewHeight:460];
     }
 }
 
-- (void)setScrollViewHeight:(CGFloat)height 
+- (void)adjustScrollViewHeight:(CGFloat)height 
 {
     UIScrollView *tempScrollView=(UIScrollView *)self.view;
     tempScrollView.contentSize=CGSizeMake(320,height);
 }
+
+#pragma mark - Orientation Methods
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    
+
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation 
+{
+
+}
+
 
 @end
