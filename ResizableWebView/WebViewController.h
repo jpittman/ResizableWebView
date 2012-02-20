@@ -12,13 +12,15 @@
     
     UIButton *addButton;
     UIButton *removeButton;
-    UILabel *textLabel;
+    UILabel *heightLabel;
+    UILabel *widthLabel;
     UIWebView *aWebView;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *addButton;
 @property (nonatomic, retain) IBOutlet UIButton *removeButton;
-@property (nonatomic, retain) IBOutlet UILabel *textLabel;
+@property (nonatomic, retain) IBOutlet UILabel *heightLabel;
+@property (nonatomic, retain) IBOutlet UILabel *widthLabel;
 @property (nonatomic, retain) IBOutlet UIWebView *aWebView;
 
 - (IBAction)addContent;
