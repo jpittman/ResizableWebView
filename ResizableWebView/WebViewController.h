@@ -15,6 +15,7 @@
     UILabel *heightLabel;
     UILabel *widthLabel;
     UIWebView *aWebView;
+    NSString *content;
     BOOL loaded;
 }
 
@@ -23,6 +24,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *heightLabel;
 @property (nonatomic, retain) IBOutlet UILabel *widthLabel;
 @property (nonatomic, retain) IBOutlet UIWebView *aWebView;
+@property (nonatomic, retain) NSString *content;
 @property (nonatomic, assign) BOOL loaded;
 
 - (IBAction)addContent;

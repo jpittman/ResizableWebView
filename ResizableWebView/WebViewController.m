@@ -21,6 +21,7 @@
 @implementation WebViewController
 
 @synthesize addButton, removeButton, heightLabel, widthLabel, aWebView, loaded;
+@synthesize content;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -85,17 +86,20 @@
     NSString *boiler = @"<html><head><meta name=\"viewport\" content=\"width=280\"/>"
                         "</head><body>%@</body></html>";
 
-    // Grab the contents of a html file and return it as a string.
-    NSError *error;
-    NSString *loremPath = [[NSBundle mainBundle] pathForResource:@"lorem" ofType:@"html"];
-    NSStream *contents = [NSString stringWithContentsOfFile:loremPath 
-                                                   encoding:NSASCIIStringEncoding error:&error];
+    if (self.content == nil) {
+        // Grab the contents of a html file and return it as a string.
+        NSError *error;
+        NSString *loremPath = [[NSBundle mainBundle] pathForResource:@"lorem" ofType:@"html"];
+        NSStream *contents = [NSString stringWithContentsOfFile:loremPath 
+                                                       encoding:NSASCIIStringEncoding error:&error];
     
-    // Combine the boilerplate and the file contents.   
-    NSString *html = [[NSString alloc] initWithFormat:boiler, contents];
+        // Combine the boilerplate and the file contents.   
+        self.content = [[NSString alloc] initWithFormat:boiler, contents];
+    
+    }
     
     // load our html string into the webview.
-    [self.aWebView loadHTMLString:html baseURL:nil];
+    [self.aWebView loadHTMLString:self.content baseURL:nil];
     
     [self setLoaded:YES];
     
@@ -172,18 +176,31 @@
     
     NSLog(@"Adjust Height Called.");
     
+    // get the frame of our view.
     CGRect frame = [aView frame];
 
     CGFloat scrollHeight;
+    
     if (self.loaded) {
+        
+        // if content is loaded, adjust the view's frame for the height.
         frame.size.height = height;
+        
+        // add a little space for the scrollable viewing area.
         scrollHeight = height + 110 + 20;
     } else {
+        
+        // if not, set the height to the default value of 150
         frame.size.height = 150;
+        
+        // set the scrollable area to the view's bounds.
         scrollHeight = CGRectGetHeight(self.view.bounds);
     }
     
+    // set the view's frame with the adjusted height value.
     [aView setFrame:frame];
+    
+    // now set the height of the scrollview 
     [self adjustScrollViewHeight:scrollHeight];
     
     // set our label indicating the new height of the view.
@@ -281,6 +298,12 @@
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation 
 {
 //    NSLog(@"Did Rotate From Called.");
+    
+    if (self.loaded) {
+        [self removeContent];
+        [self addContent];
+    }
+    
     // set our label indicating the new height of the view.
     [self adjustWebView];
 }
