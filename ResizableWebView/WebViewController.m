@@ -295,10 +295,16 @@
 //    NSLog(@"%@", result);
 }
 
+// TODO: When content is loaded into the webview and it goes from portrait to landscape 
+// orientation, the height of the webview does not resize correctly to be shorter.
+// By removing and adding, it works as expected.  But it feels like a hack.  Need 
+// to find a better way.
+
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation 
 {
 //    NSLog(@"Did Rotate From Called.");
     
+
     if (self.loaded) {
         [self removeContent];
         [self addContent];
