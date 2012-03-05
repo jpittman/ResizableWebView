@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8120B5EB15054294008BEFE3 /* height.js in Resources */ = {isa = PBXBuildFile; fileRef = 8120B5E915054187008BEFE3 /* height.js */; };
 		8159589B14EB17F3007CF6AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8159589A14EB17F3007CF6AE /* UIKit.framework */; };
 		8159589D14EB17F3007CF6AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8159589C14EB17F3007CF6AE /* Foundation.framework */; };
 		8159589F14EB17F3007CF6AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8159589E14EB17F3007CF6AE /* CoreGraphics.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8120B5E915054187008BEFE3 /* height.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = height.js; sourceTree = "<group>"; };
 		8159589614EB17F3007CF6AE /* ResizableWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResizableWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8159589A14EB17F3007CF6AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8159589C14EB17F3007CF6AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8120B5E715054146008BEFE3 /* javascript */ = {
+			isa = PBXGroup;
+			children = (
+				8120B5E915054187008BEFE3 /* height.js */,
+			);
+			name = javascript;
+			sourceTree = "<group>";
+		};
 		8159588B14EB17F2007CF6AE = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +124,7 @@
 		815958A014EB17F3007CF6AE /* ResizableWebView */ = {
 			isa = PBXGroup;
 			children = (
+				8120B5E715054146008BEFE3 /* javascript */,
 				815958A914EB17F3007CF6AE /* AppDelegate.h */,
 				815958AA14EB17F3007CF6AE /* AppDelegate.m */,
 				815958A114EB17F3007CF6AE /* Supporting Files */,
@@ -225,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8120B5EB15054294008BEFE3 /* height.js in Resources */,
 				815958A514EB17F3007CF6AE /* InfoPlist.strings in Resources */,
 				815958CD14EB18DE007CF6AE /* WebViewController.xib in Resources */,
 				81778D3414EC907F00C6AF80 /* lorem.html in Resources */,
