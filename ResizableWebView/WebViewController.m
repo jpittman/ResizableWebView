@@ -230,17 +230,8 @@
 {
     NSLog(@"Find Height Called.");
     
-    // our bit of javascript to determine the height of the html content.
-    NSString *jsHeight = @"function getDocHeight() {"
-                          "var D = document;"
-                          "return Math.max("
-                          "Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),"
-                          "Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),"
-                          "Math.max(D.body.clientHeight, D.documentElement.clientHeight)"
-                          ");"
-                          "}"
-                          "getDocHeight();";
-    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"height" ofType:@"js"];
+    NSString *jsHeight = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     
     // Execute our javascript against the html and return the height.
     CGFloat height = [[webView stringByEvaluatingJavaScriptFromString:jsHeight] floatValue];
