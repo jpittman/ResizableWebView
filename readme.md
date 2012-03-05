@@ -42,4 +42,5 @@ of these posts/threads were put to good use in coming up with the final solution
  * http://stackoverflow.com/a/4094906/1080311
  * http://stackoverflow.com/a/6104537/1080311
  * http://warmfuzzyapps.com/2011/08/fun-with-uiwebview/
+ * http://www.icab.de/blog/2011/08/02/adding-javascript-files-as-resources-to-an-xcode-project/
  
